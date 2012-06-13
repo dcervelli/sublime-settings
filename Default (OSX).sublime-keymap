@@ -1,0 +1,67 @@
+[
+	{ "keys": ["super+d"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
+
+	// { "keys": ["super+shift+up"], "command": "select_lines", "args": {"forward": false} },
+	// { "keys": ["super+shift+down"], "command": "select_lines", "args": {"forward": true} }
+
+	{ "keys": ["super+j"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse":false} },
+	{ "keys": ["super+shift+j"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse":true} },
+	{ "keys": ["super+k"], "command": "find_next" },
+
+	{ "keys": ["alt+up"], "command": "swap_line_up" },
+	{ "keys": ["alt+down"], "command": "swap_line_down" },
+
+	{ "keys": ["super+."], "command": "find_under" },
+	{ "keys": ["super+,"], "command": "find_under_prev" },
+
+	{ "keys": ["ctrl+pageup"], "command": "prev_view" },
+	{ "keys": ["ctrl+pagedown"], "command": "next_view" },
+
+	// // Only duplicates selection if present, use Ctrl+L before to expand selection to lines.
+	{ "keys": ["super+alt+down"], "command": "duplicate_line"},
+	// // Doesn't work well with selection blocks, goes up one line instead of to top of block.
+	{ "keys": ["super+alt+up"], "command": "run_macro_file", "args": {"file": "Packages/User/duplicate_line_up.sublime-macro"} },
+
+	{ "keys": ["super+e"], "command": "find_under_expand" },
+
+	{ "keys": ["alt+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
+	{ "keys": ["alt+right"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
+	{ "keys": ["alt+shift+left"], "command": "move", "args": {"by": "subwords", "forward": false, "extend": true} },
+	{ "keys": ["alt+shift+right"], "command": "move", "args": {"by": "subword_ends", "forward": true, "extend": true} },
+
+	{ "keys": ["alt+backspace"], "command": "run_macro_file", "args": {"file": "Packages/User/delete_back_subword.sublime-macro"} },
+	{ "keys": ["alt+delete"], "command": "run_macro_file", "args": {"file": "Packages/User/delete_forward_subword.sublime-macro"} },
+
+	{ "keys": ["end"], "command": "move_to", "args": {"to": "eol"} },
+	{ "keys": ["home"], "command": "move_to", "args": {"to": "bol"} },
+	{ "keys": ["shift+home"], "command": "move_to", "args": {"to": "bol", "extend": true} },
+	{ "keys": ["shift+end"], "command": "move_to", "args": {"to": "eol", "extend": true} },
+
+	{ "keys": ["shift+super+r"], "command": "find_all_under" },
+
+	{ "keys": ["super+a"], "command": "replace_all", "args": {"close_panel": true},
+		 "context": [{"key": "panel", "operand": "replace"}, {"key": "panel_has_focus"}]
+	},
+
+	{ "keys": ["super+alt+left"], "command": "navigation_history_back"},
+	{ "keys": ["super+alt+right"], "command": "navigation_history_forward"},
+
+    { "keys": ["ctrl+q"], "command": "last_edit_line" },
+    { "keys": ["ctrl+l"], "command": "expand_selection", "args": {"to": "line"} },
+    { "keys": ["super+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} }
+
+	// Remap ctrl+q to alt+q
+	// Install github.com/khrizt/GotoLastEdit as ctrl+q
+
+	// Duplicate line command fix:
+	// pastebin.com/isFx8xFw
+
+	// Ctrl+Shift+R to Ctrl+P
+	// Ctrl+R to Ctrl+O, what to do with Ctrl+O?
+	// Ctrl+G to Ctrl+L
+	// Ctrl+L?
+
+	// How to make F3 goto declaration? Search in files?
+	// Checkout github.com/Kronuz/SublimeCodeIntel
+	// Checkout CTags (with coffeescript support: gist.github.com/2405554 and 907245)
+]
