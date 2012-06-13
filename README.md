@@ -1,4 +1,4 @@
 sublime-settings
 ================
 
-My Sublime Text 2 Settings
+These files go in the Packages/User directory.
